@@ -1,0 +1,9 @@
+{
+    "agent_commission": "АВ",
+    "insurance_period": "СрокСтрахования",
+    "insurance_amount": "СтраховаяСумма",
+    "rvd_percent": "ПроцентРасходовНаВедениеДел",
+    "franchise_info": "РазмерФраншизы",
+    "comment_manager": "КомментарийМенеджера",
+    "comment_under": "КомментарийАндеррайтера"
+}

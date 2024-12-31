@@ -1,0 +1,156 @@
+{
+    "title": "create quote request response schema",
+    "type": "object",
+    "required": ["success", "message", "data"],
+    "properties": {
+        "success": {
+            "type": "boolean"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "required": ["status", "intersection", "affiliation", "manager_id", "under_id", "assistance_id", "id_sales", "id_detailing", "insurance_type_id",
+            "product_id", "agent_id", "agent_commission","insurance_period", "insurance_period_unit", "insurance_amount", "insurance_amount_currency",
+            "decision_making_level", "cr_lr_id", "tariff", "premium", "franchise_option","franchise_type_id", "franchise_loss", "franchise_damage", "franchise_info",
+            "is_franchise_single", "contract_type_id", "number_contract", "number_quote","reinsurance_required", "reinsurance_type_id", "reinsurer_residence",
+            "reinsurer_rating","comment_manager", "comment_object", "project_bonus_feature", "project_bonus_size","validity_period", "user_id",
+            "updated_at", "created_at", "id", "parent_id", "version"],
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "intersection": {
+                    "type": "boolean"
+                },
+                "affiliation": {
+                    "type": "boolean"
+                },
+                "manager_id": {
+                    "type": "number"
+                },
+                "under_id": {
+                    "type": "number"
+                },
+                "assistance_id": {
+                    "type": ["number", "null"]
+                },
+                "id_sales": {
+                    "type": "number"
+                },
+                "id_detailing": {
+                    "type": "number"
+                },
+                "insurance_type_id": {
+                    "type": "number"
+                },
+                "product_id": {
+                    "type": "number"
+                },
+                "agent_id": {
+                    "type": "number"
+                },
+                "agent_commission": {
+                    "type": "number"
+                },
+                "insurance_period": {
+                    "type": "number"
+                },
+                "insurance_period_unit": {
+                    "type": "string"
+                },
+                "insurance_amount": {
+                    "type": "number"
+                },
+                "insurance_amount_currency": {
+                    "type": "string"
+                },
+                "decision_making_level": {
+                    "type": "number"
+                },
+                "cr_lr_id": {
+                    "type": "number"
+                },
+                "tariff": {
+                    "type": "number"
+                },
+                "premium": {
+                    "type": "number"
+                },
+                "franchise_option": {
+                    "type": "string"
+                },
+                "franchise_type_id": {
+                    "type": "number"
+                },
+                "franchise_loss": {
+                    "type":  ["string", "null"]
+                },
+                "franchise_damage": {
+                    "type": ["string", "null"]
+                },
+                "franchise_info": {
+                    "type":  ["string", "null"]
+                },
+                "is_franchise_single": {
+                    "type": "boolean"
+                },
+                "contract_type_id": {
+                    "type": "number"
+                },
+                "number_contract": {
+                    "type":  ["string", "null"]
+                },
+                "number_quote": {
+                    "type":  ["string", "null"]
+                },
+                "reinsurance_required": {
+                    "type": "boolean"
+                },
+                "reinsurance_type_id": {
+                    "type": ["number" , "null"]
+                },
+                "reinsurer_residence": {
+                    "type": ["string", "null"]
+                },
+                "reinsurer_rating": {
+                    "type": ["string", "null"]
+                },
+                "comment_manager": {
+                    "type":  ["string", "null"]
+                },
+                "comment_object": {
+                    "type": ["string", "null"]
+                },
+                "project_bonus_feature": {
+                    "type": ["number" , "null"]
+                },
+                "project_bonus_size": {
+                    "type": ["number" , "null"]
+                },
+                "validity_period": {
+                    "type": "number"
+                },
+                "user_id": {
+                    "type": "number"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "number"
+                },
+                "parent_id": {
+                    "type": "number"
+                },
+                "version": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

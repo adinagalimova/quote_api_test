@@ -1,0 +1,35 @@
+{
+    "crlrValue":{
+        "success": true,
+        "message": "Премия успешно рассчитана!"
+    },
+    "createRequest": {
+        "success": true,
+        "message": "Заявка успешно сохранена!"
+    },
+    "getRequest": {
+        "success": true
+    },
+    "updateRequest": {
+        "success": true,
+         "message": "Заявка успешно изменена!"
+    },
+    "calculatePremium": {
+        "success": true,
+        "message": "Премия успешно рассчитана!"
+    },
+    "uploadDocument": {
+            "success": true
+    },
+    "deleteDocument": {
+        "success": true
+    },
+    "getIsuranceTypes": {
+        "success": true,
+        "message": "Данные успешно получены"
+    },
+    "setRevisionRequest": {
+        "success": true,
+        "message": "Заявка отправлена на доработку!"
+    }
+}

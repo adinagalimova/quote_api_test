@@ -1,0 +1,27 @@
+{
+    "sex": {
+        "male": 1,
+        "female": 0
+    },
+    "payment_form": {
+        "once": 0,
+        "installments": 1
+    },
+    "policy_type": {
+        "main": 0
+    },
+    "policy_status": {
+        "issued": 8,
+        "cancelled": "Данные отстутствуют или договор помечен на удаление!"
+    },
+    "ins_type_id": {
+        "dsHealth": 95
+    },
+    "doc_gived_by": {
+        "1": 1,
+        "2": 2,
+        "4": 4,
+        "5": 5
+    }
+    
+}

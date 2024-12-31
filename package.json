@@ -1,0 +1,35 @@
+{
+    "devDependencies": {
+        "allure-commandline": "^2.23.1",
+        "allure-mocha": "^2.4.0",
+        "axios": "^1.4.0",
+        "chai": "^4.3.7",
+        "chai-json-schema": "^1.5.1",
+        "chai-subset": "^1.6.0",
+        "dotenv": "^16.3.1",
+        "eslint": "^8.56.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "js-yaml": "^4.1.0",
+        "mocha": "^10.2.0",
+        "moment": "^2.29.4",
+        "moment-timezone": "^0.5.45",
+        "mysql2": "^3.6.1"
+    },
+    "scripts": {
+        "eslint": "eslint --ext .js .",
+        "eslint:fix": "eslint --fix --ext .js .",
+        "lint": "npm run config && npm run eslint",
+        "lint:fix": "npm run config && npm run eslint:fix",
+        "config": "node ./test/main/utils/data/filesParser.js",
+        "config:split": "node ./test/main/utils/data/filesParser.js --setPolicyWaitingTWB",
+        "config:parallel": "node ./test/main/utils/data/filesParser.js --parallel",
+        "ci:generate": "node ./test/main/utils/data/gitlabCIGenerator.js",
+        "mocha:run": "mocha test/tests/specs/*.js --timeout 240000 --require test/main/baseTest --reporter allure-mocha --reporter-options resultsDir=./test/artifacts/allure-results --bail",
+        "mocha:run:split": "mocha test/tests/specs/*$SPEC_PATTERN.js --timeout 240000 --require test/main/baseTest --reporter allure-mocha --reporter-options resultsDir=./test/artifacts/allure-results --bail",
+        "mocha:run:parallel": "find test/tests/specs/ -name 'spec*.js' | parallel -j4 mocha {} --timeout 2400000 --require test/main/baseTest --reporter allure-mocha --reporter-options resultsDir=./test/artifacts/allure-results --bail",
+        "test": "npm run config && npm run mocha:run",
+        "test:split": "npm run config:split && npm run mocha:run:split",
+        "test:parallel": "npm run config:parallel && npm run mocha:run:parallel",
+        "test:debug": "node --inspect-brk -r ts-node/register node_modules/mocha/bin/_mocha -- test/tests/specs/*.js --timeout 20000 --require test/main/baseTest --reporter allure-mocha --bail"
+    }
+}

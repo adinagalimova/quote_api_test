@@ -1,0 +1,38 @@
+{
+    "auth": {
+        "login": "api/login",
+        "testUsers": "api/auth/test-users"
+    },
+    "TWB": {
+        "getListByName": "GetListByName?type_name=Документ&object_name=Котировки&НомерЗапроса=QT{number}"
+    },
+    "dictionary": {
+        "servers": "api/dictionary/settings/5",
+        "verifyBool": "api/dictionary/settings/verify_bool",
+        "getProducts": "api/dictionary/products",
+        "getAffiliate": "api/dictionary/affiliates",
+        "getChannelDetails": "api/dictionary/channel-details",
+        "getInsuranceTypes": "api/dictionary/default-insurance-types",
+        "getInsuranceTypeProducts": "api/dictionary/insurance-type-products",
+        "getProductToRisks": "api/dictionary/product-to-risks"
+    },
+    "quote": {
+        "calculatePremium": "api/quote/premium",
+        "getCrLrValue": "api/quote/cr-lr",
+        "createRequest": "api/quote/requests/create",
+        "getRequest": "api/quote/requests/{id}",
+        "updateRequest": "api/quote/requests/update/{id}",
+        "uploadDocument": "api/quote/documents/upload",
+        "getDocument": "api/quote/documents/{id}",
+        "getDocumentById": "api/quote/documents/{id}/quote",
+        "deleteDocument": "api/quote/documents/{id}/{quote_id}",
+        "getSalesChannels": "api/quote/directory/sales-channels",
+        "assistances": "api/quote/directory/assistances",
+        "rejectionReasons": "api/quote/directory/rejection-reasons",
+        "limits": "api/quote/directory/limits",
+        "makingLevels": "api/quote/directory/making-levels",
+        "setRevision": "api/quote/requests/revision/{id}",
+        "approveRequest": "api/quote/requests/approve/{id}",
+        "setToOnes": "api/quote/requests/set/{id}"
+}
+}

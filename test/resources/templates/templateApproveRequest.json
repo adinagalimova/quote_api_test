@@ -1,0 +1,13 @@
+{
+    "tariff": 5,
+    "franchise_option": "KZT2",
+    "franchise_type_id": 12,
+    "franchise_loss": "1000000",
+    "franchise_damage": "202",
+    "franchise_info": "info about franchise test",
+    "comment_under": "approved",
+    "is_franchise_single": false,
+    "reinsurance_required": false,
+    "reinsurance_type_id": "",
+    "rvd_percent": 20
+}

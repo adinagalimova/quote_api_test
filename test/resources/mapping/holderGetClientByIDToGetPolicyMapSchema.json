@@ -1,0 +1,19 @@
+{    
+    "clients.0.client_id_ext": "ID",
+    "clients.0.first_name": "First_Name",
+    "clients.0.last_name": "Last_Name",
+    "clients.0.first_name_eng": "First_Name_eng",
+    "clients.0.last_name_eng": "Last_Name_eng",
+    "clients.0.iin": "IIN",
+    "clients.0.sex": "Sex_ID",
+    "clients.0.residence": "RESIDENT_BOOL",
+    "clients.0.birth_date": "Born",
+    "clients.0.doc_number": "DOCUMENT_NUMBER",
+    "clients.0.doc_gived_by": "DOCUMENT_GIVED_BY",
+    "clients.0.doc_gived_at": "DOCUMENT_GIVED_DATE",
+    "clients.0.doc_type": "DOCUMENT_TYPE_ID",
+    "clients.0.address_street": "Juridical_Address",
+    "clients.0.address_country_id": "COUNTRY_ID",
+    "clients.0.verify_bool": "verify_bool",
+    "clients.0.client_type": "Natural_Person_Bool"
+}

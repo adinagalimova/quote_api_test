@@ -1,0 +1,19 @@
+{
+    "parallel": false,
+    "getPolicyTWB": true,
+    "setPolicyWaitingTWB": false,
+    "hiddenLogBodies": true,
+    "verification": true,
+    "timezone": "Asia/Aqtau",
+    "environment": "dev",
+    "allureCommandlineArgs": [
+        "generate",
+        "./test/artifacts/allure-results",
+        "--clean",
+        "-o",
+        "./test/artifacts/allure-report"
+    ],
+    "servers": "[{\"url\":\"https://testesbd.mkb.kz:8077/IICwebservice.asmx\",\"active\":1},{\"url\":\"https://testesbd-beta.mkb.kz:8078/IICWebservice.asmx\",\"active\":0}]",
+    "passed": "---------------------------PASSED--------------------------",
+    "failed": "---------------------------FAILED--------------------------"
+}

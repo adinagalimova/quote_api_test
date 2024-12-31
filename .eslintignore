@@ -1,0 +1,6 @@
+node_modules/
+vendor/
+test/artifacts/
+test/main/utils/data/JSONLoader.js
+resources/js/
+vite.config.js

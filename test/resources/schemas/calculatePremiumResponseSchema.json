@@ -1,0 +1,22 @@
+{
+    "title": "calculate-premium response schema",
+    "type": "object",
+    "required": ["success", "message", "data"],
+    "properties": {
+        "success": {
+            "type": "boolean"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "required": ["premium"],
+            "properties": {
+                "premium": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

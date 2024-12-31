@@ -1,0 +1,9 @@
+{
+    "ins_type_id": "127",
+    "insurance_amount": "10000000",
+    "tariff": 1.98,
+    "sales_channel_id_1c": {
+        "operator": "=",
+        "value": "1"
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "get insurance types response schema",
+  "type": "object",
+  "required": ["success", "message", "data"],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "id_1c": {
+            "type": "integer"
+          },
+          "id_esbd": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "serial_number": {
+            "type": "string"
+          },
+          "obligate": {
+            "type": "integer"
+          },
+          "is_gpo": {
+            "type": "integer"
+          },
+          "active": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "id_1c", "id_esbd", "title", "serial_number", "obligate", "is_gpo", "active",
+          "created_at", "updated_at"]
+      }
+    }
+    }
+  }

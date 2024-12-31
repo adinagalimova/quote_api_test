@@ -1,0 +1,14 @@
+{
+    "risks_id": [186],
+    "franchise_option": "KZT",
+    "franchise_type_id": 1,
+    "franchise_loss": "10",
+    "franchise_damage": "20",
+    "franchise_info": "test franchise_info",
+    "is_franchise_single": false,
+    "reinsurance_required": false,
+    "reinsurance_type_id": "",
+    "rvd_percent": 20,
+    "comment_under": "test comment_under",
+    "validity_period": 30
+}
