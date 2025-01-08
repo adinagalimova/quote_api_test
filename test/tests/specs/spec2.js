@@ -21,16 +21,15 @@ describe("Quote API Test Suite from a Manager's Perspective:", async () => {
       .and.containSubset(JSONLoader.templateResponse.createRequest);
     const responseID = response.data.data.id;
     const parentID = response.data.data.parent_id;
-
     const responseUpdate = await quoteAPI.updateRequest(responseID);
     responseUpdate.status.should.be.equal(200);
     responseUpdate.data.should.be.jsonSchema(JSONLoader.updateRequestResponseSchema)
       .and.containSubset(JSONLoader.templateResponse.updateRequest);
 
-    const setRevisonRequest = await quoteAPI.setRevisionRequest(responseID);
-    setRevisonRequest.status.should.be.equal(200);
-    setRevisonRequest.data.should.containSubset(JSONLoader.templateResponse.setRevisionRequest);
-    const setRevisionID = setRevisonRequest.data.data.id;
+    const setRevisionRequest = await quoteAPI.setRevisionRequest(responseID);
+    setRevisionRequest.status.should.be.equal(200);
+    setRevisionRequest.data.should.containSubset(JSONLoader.templateResponse.setRevisionRequest);
+    const setRevisionID = setRevisionRequest.data.data.id;
 
     const responseUpdateAfterRevision = await quoteAPI.updateRequest(setRevisionID);
     responseUpdateAfterRevision.status.should.be.equal(200);
@@ -50,7 +49,7 @@ describe("Quote API Test Suite from a Manager's Perspective:", async () => {
       .and.containSubset(JSONLoader.templateResponse.getRequest);
     const quoteRequest = responseGet.data.data;
 
-    const responseTWB = await TWBAPI.getListByName(parentID); // get response from TWB
+    const responseTWB = await TWBAPI.getListByName(parentID);
     responseTWB.status.should.be.equal(200);
     const quoteResponseFromTWB = responseTWB.data.object_list;
 
