@@ -14,7 +14,7 @@ describe("Quote API Test Suite from a Manager's Perspective:", async () => {
     if (!JSONLoader.configData.parallel) Logger.log(this.currentTest.title);
   });
 
-  it.only('Test ones', async () => {
+  it('Test ones', async () => {
     const response = await quoteAPI.createRequest();
     response.status.should.be.equal(200);
     response.data.should.be.jsonSchema(JSONLoader.createRequestResponseSchema)
