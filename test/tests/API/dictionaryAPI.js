@@ -51,10 +51,6 @@ class DictionaryAPI extends BaseAPI {
 
     return this.#API.get(JSONLoader.APIEndpoints.dictionary.getChannelDetails, params);
   }
-
-  async getInsuranceTypes() {
-    return this.#API.get(JSONLoader.APIEndpoints.dictionary.getInsuranceTypes);
-  }
 }
 
 module.exports = new DictionaryAPI();

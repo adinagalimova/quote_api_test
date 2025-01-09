@@ -7,7 +7,7 @@ const specDirectory = path.join(__dirname, '..', '..', '..', 'tests', 'specs');
 const specFiles = fs.readdirSync(specDirectory);
 const jobs = specFiles.map((spec, index) => ({
   [`API tests ${index + 1}`]: {
-    image: 'node:latest',
+    image: `node:${process.version.replace(/^v+/, '')}`,
     stage: 'test',
     variables: {
       SPEC_PATTERN: index + 1,
