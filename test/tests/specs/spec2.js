@@ -38,10 +38,12 @@ describe("Quote API Test Suite from a Manager's Perspective:", async () => {
     const responseUpdateAfterRevisionID = responseUpdateAfterRevision.data.data.id;
     const approveRequest = await quoteAPI.approveRequest(responseUpdateAfterRevisionID);
     approveRequest.status.should.be.equal(200);
+    approveRequest.data.should.containSubset(JSONLoader.templateResponse.approveRequest);
     const approvedID = approveRequest.data.data.id;
 
     const setRequest = await quoteAPI.setQuoteToOnes(approvedID);
     setRequest.status.should.be.equal(200);
+    setRequest.data.should.containSubset(JSONLoader.templateResponse.setToOnes);
 
     const responseGet = await quoteAPI.getRequest(approvedID);
     responseGet.status.should.be.equal(200);
@@ -57,6 +59,11 @@ describe("Quote API Test Suite from a Manager's Perspective:", async () => {
       quoteResponseFromTWB,
       quoteRequest,
     );
+
+    if (!mappedData || Object.keys(mappedData).length === 0) {
+      Logger.log('[inf]   Error: mappedData is empty');
+      throw new Error();
+    }
     quoteRequest.should.containSubset(mappedData);
   });
 

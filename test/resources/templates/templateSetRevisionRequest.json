@@ -1,14 +1,28 @@
 {
-    "risks_id": [186],
-    "franchise_option": "KZT",
-    "franchise_type_id": 1,
-    "franchise_loss": "10",
-    "franchise_damage": "20",
-    "franchise_info": "test franchise_info",
-    "is_franchise_single": false,
+    "agent_commission": 55,
+    "tariff": 6,
+    "premium": 50000,
+    "product_id": 45,
+    "risk_ids": [186, 89],
+    "franchise_info": "test text",
     "reinsurance_required": false,
     "reinsurance_type_id": "",
-    "rvd_percent": 20,
-    "comment_under": "test comment_under",
-    "validity_period": 30
+    "rvd_percent": 2.2,
+    "comment_under": "comment under",
+    "comment_object": "comment object",
+    "validity_period": 20,
+    "with_amortization": null,
+    "damage_franchise": {
+        "type_id": 1,
+        "percent": 3,
+        "operator_id": 1,
+        "threshold_amount": 100000
+    },
+    "loss_franchise": {
+        "without_franchise": false,
+        "percent": 5,
+        "operator_id": null,
+        "threshold_amount": null,
+        "threshold_type_id": 1
+    }
 }

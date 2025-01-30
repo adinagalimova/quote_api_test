@@ -13,8 +13,8 @@
             "type": "object",
             "required": ["id", "parent_id", "version", "status", "intersection", "affiliation", "user_id", "manager_id", "under_id", "assistance_id", "id_sales", "id_detailing", "insurance_type_id",
             "product_id", "agent_list_type", "agent_id", "agent_commission","insurance_period", "insurance_period_unit","validity_period", "insurance_amount", "insurance_amount_currency",
-            "decision_making_level","decision_making_level_changes", "cr_lr_id", "tariff", "premium", "franchise_option","franchise_type_id", "franchise_loss", "franchise_damage", "franchise_info",
-            "is_franchise_single", "contract_type_id", "number_contract", "number_quote","have_reinsurance", "reinsurance_required", "reinsurance_required", "reinsurance_type_id", "reinsurer_residence", 
+            "decision_making_level","decision_making_level_changes", "cr_lr_id", "tariff", "premium", "franchise_info",
+            "contract_type_id", "number_contract", "number_quote","have_reinsurance", "reinsurance_required", "reinsurance_required", "reinsurance_type_id", "reinsurer_residence",
             "reinsurer_rating","comment_manager", "comment_under", "comment_object", "comment_review", "return_ones","return_cancel_user_id","cause","reason_id","reason_comment", "project_bonus_feature","bonus_net_income","project_bonus_full_name","project_bonus_size","manager_bonus", "team_bonus", "regional_bonus", "bonuses", "manager_bonus_max","team_bonus_max","regional_bonus_max", "date_board_submit", "date_board_submit_auto_update","checked_by_risk_manager", "rvd_percent", "requested_at",
             "updated_at", "created_at"],
             "properties": {
@@ -44,78 +44,63 @@
                 },
                 "under_id": {
                     "type": "number"
-                }, 
+                },
                 "assistance_id": {
                     "type": ["number", "null"]
-                }, 
+                },
                 "id_sales": {
                     "type": "number"
-                }, 
+                },
                 "id_detailing": {
                     "type": "number"
-                }, 
+                },
                 "insurance_type_id": {
                     "type": "number"
-                }, 
+                },
                 "product_id": {
                     "type": "number"
-                }, 
+                },
                 "agent_list_type": {
                     "type": "number"
-                }, 
+                },
                 "agent_id": {
                     "type": "number"
-                }, 
+                },
                 "agent_commission": {
                     "type": "number"
-                }, 
+                },
                 "insurance_period": {
                     "type": "number"
-                }, 
+                },
                 "insurance_period_unit": {
                     "type": "number"
-                }, 
+                },
                 "validity_period": {
                     "type": ["number", "null"]
-                }, 
+                },
                 "insurance_amount": {
                     "type": ["number", "string"]
-                }, 
+                },
                 "insurance_amount_currency": {
                     "type": "string"
-                }, 
+                },
                 "decision_making_level": {
                     "type": "number"
-                }, 
+                },
                 "decision_making_level_changes": {
                     "type": ["number", "null"]
-                }, 
+                },
                 "cr_lr_id": {
                     "type": "number"
-                }, 
+                },
                 "tariff": {
                     "type": ["number", "string"]
                 },
                 "premium": {
                     "type": ["number", "string"]
-                },  
-                "franchise_option": {
-                    "type": "string"
-                },
-                "franchise_type_id": {
-                    "type": "number"
-                },
-                "franchise_loss": {
-                    "type": ["number", "null"]
-                },
-                "franchise_damage": {
-                    "type": ["number", "null"]
                 },
                 "franchise_info": {
                     "type": ["string", "null"]
-                },
-                "is_franchise_single": {
-                    "type": "number"
                 },
                 "contract_type_id": {
                     "type": "number"
@@ -158,13 +143,13 @@
                 },
                 "return_cancel_user_id": {
                     "type": ["number", "null"]
-                },  
+                },
                 "cause": {
                     "type": ["string", "null"]
-                }, 
+                },
                 "reason_id": {
                     "type": ["number", "null"]
-                }, 
+                },
                 "reason_comment": {
                     "type": ["string", "null"]
                 },
@@ -216,7 +201,6 @@
                 "requested_at": {
                     "type": ["string", "null"]
                 },
-        
                 "updated_at": {
                     "type": "string"
                 },
@@ -233,21 +217,90 @@
                         "type": "object",
                         "required": ["id", "quote_id", "risk_id"],
                         "properties": {
-                            "id": { 
-                                "type": "integer" 
+                            "id": {
+                                "type": "integer"
                             },
-                            "quote_id": { 
-                                "type": "integer" 
+                            "quote_id": {
+                                "type": "integer"
                             },
-                            "risk_id": { 
-                                "type": "integer" 
+                            "risk_id": {
+                                "type": "integer"
                             },
-                            "created_at": { 
+                            "created_at": {
                                 "type": ["string", "null"]
                             },
                             "updated_at": {
                                  "type": ["string", "null"]
                             }
+                        }
+                    }
+                },
+                "damage_franchise": {
+                    "type": "object",
+                    "required": ["id", "percent", "operator_id", "threshold_amount", "type_id", "text", "quote_id", "created_at", "updated_at"],
+                    "properties": {
+                        "id": {
+                            "type": ["number", "null"]
+                        },
+                        "percent": {
+                            "type": ["number", "null"]
+                        },
+                        "operator_id": {
+                            "type": ["number", "null"]
+                        },
+                        "threshold_amount": {
+                            "type": ["number", "null"]
+                        },
+                        "type_id": {
+                            "type": ["number", "null"]
+                        },
+                        "text": {
+                            "type": ["string", "null"]
+                        },
+                        "quote_id": {
+                            "type": ["number", "null"]
+                        },
+                        "created_at": {
+                            "type": ["string", "null"]
+                        },
+                        "updated_at": {
+                            "type": ["string", "null"]
+                        }
+                    }
+                },
+                "loss_franchise": {
+                    "type": "object",
+                    "required": ["id", "without_franchise", "percent", "operator_id", "threshold_type_id","threshold_amount", "text", "quote_id", "created_at", "updated_at"],
+                    "properties": {
+                        "id": {
+                            "type": ["number", "null"]
+                        },
+                        "without_franchise": {
+                            "type": "number"
+                        },
+                        "percent": {
+                            "type": ["number", "null"]
+                        },
+                        "operator_id": {
+                            "type": ["number", "null"]
+                        },
+                        "threshold_type_id": {
+                            "type": ["number", "null"]
+                        },
+                        "threshold_amount": {
+                            "type": ["number", "null"]
+                        },
+                        "text": {
+                            "type": ["string", "null"]
+                        },
+                        "quote_id": {
+                            "type": ["number", "null"]
+                        },
+                        "created_at": {
+                            "type": ["string", "null"]
+                        },
+                        "updated_at": {
+                            "type": ["string", "null"]
                         }
                     }
                 },
@@ -258,8 +311,8 @@
                         "type": "object",
                         "required": ["id", "title", "s3_path", "created_at", "updated_at"],
                         "properties": {
-                            "id": { 
-                                "type": ["number", "null"] 
+                            "id": {
+                                "type": ["number", "null"]
                             },
                             "title": {
                                  "type": ["string", "null"]
@@ -267,10 +320,10 @@
                             "s3_path": {
                                  "type": ["string", "null"]
                             },
-                            "created_at": { 
+                            "created_at": {
                                 "type": ["string", "null"]
                             },
-                            "updated_at": { 
+                            "updated_at": {
                                 "type": ["string", "null"]
                             }
                         }
@@ -278,109 +331,109 @@
                 },
                 "holder": {
                     "type": "object",
-                    "required": ["id", "quote_id", "client_form_id", "subject_type_id", "resident_bool", "iin", "last_name", "first_name", 
+                    "required": ["id", "quote_id", "client_form_id", "subject_type_id", "resident_bool", "iin", "last_name", "first_name",
                                  "country_id", "sex_id", "document_type_id", "address", "phone", "verify_type_id", "verify_bool", "created_at", "updated_at"],
                     "properties": {
-                        "id": { 
+                        "id": {
                             "type": "number"
                         },
-                        "quote_id": { 
+                        "quote_id": {
                             "type": "number"
                         },
-                        "external_id": { 
+                        "external_id": {
                             "type": ["string", "null"]
                         },
-                        "client_form_id": { 
-                            "type": "number" 
+                        "client_form_id": {
+                            "type": "number"
                         },
-                        "subject_type_id": { 
-                            "type": "number" 
+                        "subject_type_id": {
+                            "type": "number"
                         },
-                        "natural_person_bool": { 
-                            "type": "number" 
+                        "natural_person_bool": {
+                            "type": "number"
                         },
-                        "resident_bool": { 
-                            "type": "number" 
+                        "resident_bool": {
+                            "type": "number"
                         },
-                        "pdl": { 
-                            "type": "number" 
+                        "pdl": {
+                            "type": "number"
                         },
-                        "iin": { 
-                            "type": "string" 
+                        "iin": {
+                            "type": "string"
                         },
-                        "juridical_person_name": { 
-                            "type": ["string", "null"] 
+                        "juridical_person_name": {
+                            "type": ["string", "null"]
                         },
-                        "last_name": { 
-                            "type": "string" 
+                        "last_name": {
+                            "type": "string"
                         },
-                        "first_name": { 
+                        "first_name": {
                             "type": "string"
                          },
-                        "middle_name": { 
-                            "type": ["string", "null"] 
-                        },
-                        "activity_kind_id": { 
-                            "type": ["number", "null"] 
-                        },
-                        "economics_sector_id": { 
-                            "type": ["number", "null"] 
-                        },
-                        "born": { 
-                            "type": "string"
-                        },
-                        "country_id": { 
-                            "type": "number" 
-                        },
-                        "sex_id": { 
-                            "type": "number" 
-                        },
-                        "document_type_id": { 
-                            "type": "number" 
-                        },
-                        "document_gived_by": { 
-                            "type": "string" 
-                        },
-                        "document_gived_date": { 
-                            "type": "string"
-                        },
-                        "document_number": { 
-                            "type": "string"
-                        },
-                        "address": { 
-                            "type": "string" 
-                        },
-                        "phone": { 
-                            "type": "string" 
-                        },
-                        "email": { 
+                        "middle_name": {
                             "type": ["string", "null"]
                         },
-                        "terrorist": { 
-                            "type": "number" 
+                        "activity_kind_id": {
+                            "type": ["number", "null"]
                         },
-                        "nat_com": { 
-                            "type": "number" 
+                        "economics_sector_id": {
+                            "type": ["number", "null"]
                         },
-                        "affiliation": { 
-                            "type": "number" 
-                        },
-                        "unreliable_client": { 
-                            "type": "number" 
-                        },
-                        "dt_verified": { 
-                            "type": ["string", "null"]
-                        },
-                        "verify_type_id": { 
-                            "type": "number" 
-                        },
-                        "verify_bool": { 
-                            "type": "number" 
-                        },
-                        "created_at": { 
+                        "born": {
                             "type": "string"
                         },
-                        "updated_at": { 
+                        "country_id": {
+                            "type": "number"
+                        },
+                        "sex_id": {
+                            "type": "number"
+                        },
+                        "document_type_id": {
+                            "type": "number"
+                        },
+                        "document_gived_by": {
+                            "type": "string"
+                        },
+                        "document_gived_date": {
+                            "type": "string"
+                        },
+                        "document_number": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "phone": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": ["string", "null"]
+                        },
+                        "terrorist": {
+                            "type": "number"
+                        },
+                        "nat_com": {
+                            "type": "number"
+                        },
+                        "affiliation": {
+                            "type": "number"
+                        },
+                        "unreliable_client": {
+                            "type": "number"
+                        },
+                        "dt_verified": {
+                            "type": ["string", "null"]
+                        },
+                        "verify_type_id": {
+                            "type": "number"
+                        },
+                        "verify_bool": {
+                            "type": "number"
+                        },
+                        "created_at": {
+                            "type": "string"
+                        },
+                        "updated_at": {
                             "type": "string"
                         }
                     }
@@ -389,79 +442,79 @@
                     "type": "object",
                     "required": ["id", "quote_id", "client_form_id", "subject_type_id", "resident_bool", "iin", "juridical_person_name", "address", "phone", "verify_type_id", "verify_bool", "created_at", "updated_at"],
                     "properties": {
-                        "id": { 
+                        "id": {
                             "type": "number"
                         },
-                        "quote_id": { 
-                            "type": "number" 
+                        "quote_id": {
+                            "type": "number"
                         },
-                        "external_id": { 
-                            "type": ["string", "null"] 
-                        },
-                        "client_form_id": { 
-                            "type": "number" 
-                        },
-                        "subject_type_id": { 
-                            "type": "number" 
-                        },
-                        "natural_person_bool": { 
-                            "type": "number" 
-                        },
-                        "resident_bool": {
-                             "type": "number" 
-                        },
-                        "pdl": {
-                             "type": "number" 
-                        },
-                        "iin": {
-                             "type": "string" 
-                        },
-                        "juridical_person_name": {
-                             "type": ["string", "null"] 
-                        },
-                        "last_name": { 
-                            "type": ["string", "null"] 
-                        },
-                        "first_name": { 
+                        "external_id": {
                             "type": ["string", "null"]
                         },
-                        "middle_name": { 
-                            "type": ["string", "null"] 
+                        "client_form_id": {
+                            "type": "number"
+                        },
+                        "subject_type_id": {
+                            "type": "number"
+                        },
+                        "natural_person_bool": {
+                            "type": "number"
+                        },
+                        "resident_bool": {
+                             "type": "number"
+                        },
+                        "pdl": {
+                             "type": "number"
+                        },
+                        "iin": {
+                             "type": "string"
+                        },
+                        "juridical_person_name": {
+                             "type": ["string", "null"]
+                        },
+                        "last_name": {
+                            "type": ["string", "null"]
+                        },
+                        "first_name": {
+                            "type": ["string", "null"]
+                        },
+                        "middle_name": {
+                            "type": ["string", "null"]
                         },
                         "activity_kind_id": {
                              "type": ["number", "null"]
                         },
-                        "economics_sector_id": { 
+                        "economics_sector_id": {
                             "type": ["number", "null"]
                         },
                         "born": {
                              "type": ["string", "null"]
                         },
                         "country_id": {
-                             "type": "number" 
+                             "type": "number"
                         },
-                        "sex_id": { 
-                            "type": ["number", "null"] 
+                        "sex_id": {
+                            "type": ["number", "null"]
                         },
-                        "document_type_id": { 
-                            "type": ["number", "null"] 
+                        "document_type_id": {
+                            "type": ["number", "null"]
                         },
-                        "document_gived_by": { 
-                            "type": ["string", "null"] 
+                        "document_gived_by": {
+                            "type": ["string", "null"]
                         },
-                        "document_gived_date": { 
+                        "document_gived_date": {
                             "type": ["string", "null"]
                         },
                         "document_number": {
-                             "type": ["string", "null"] 
+                             "type": ["string", "null"]
                         },
-                        "address": { 
-                            "type": "string" 
+                        "address": {
+                            "type": "string"
                         },
-                        "phone": { 
-                            "type": "string" 
+                        "phone": {
+                            "type": "string"
                         },
-                        "email": { 
+                        "email": {
                             "type": ["string", "null"]
                         },
                         "terrorist": {
@@ -473,8 +526,8 @@
                         "affiliation": {
                              "type": "number"
                         },
-                        "unreliable_client": { 
-                            "type": "number" 
+                        "unreliable_client": {
+                            "type": "number"
                         },
                         "dt_verified": {
                              "type": ["string", "null"]
@@ -488,12 +541,12 @@
                         "created_at": {
                              "type": "string"
                         },
-                        "updated_at": { 
+                        "updated_at": {
                             "type": "string"
                         }
                     }
                 }
             }
-        }          
+        }
     }
 }

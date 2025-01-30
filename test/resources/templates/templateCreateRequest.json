@@ -66,10 +66,24 @@
     "cr_lr_id": 1,
     "tariff": 15,
     "premium": 750000,
-    "franchise_option": "percent",
-    "franchise_type_id": 1,
-    "is_franchise_single": false,
     "contract_type_id": 1,
     "reinsurance_required": false,
-    "validity_period": 30
+    "validity_period": 30,
+    "with_amortization": true,
+    "damage_franchise": {
+        "type_id": 1,
+        "percent": 1,
+        "operator_id": 1,
+        "threshold_amount": 100000
+    },
+    "loss_franchise": {
+        "without_franchise": false,
+        "percent": 1,
+        "operator_id": null,
+        "threshold_amount": null,
+        "threshold_type_id": 1
+    },
+    "insurance_payment_condition": 1,
+    "vehicle_types": [4,6],
+    "insurance_territories": [1,2]
 }

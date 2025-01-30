@@ -31,5 +31,13 @@
     "setRevisionRequest": {
         "success": true,
         "message": "Заявка отправлена на доработку!"
+    },
+    "approveRequest": {
+        "success": true,
+        "message": "Заявка успешно утверждена!"
+    },
+    "setToOnes": {
+        "success": true,
+        "message": "Котировка успешно отправлена в 1С!"
     }
 }

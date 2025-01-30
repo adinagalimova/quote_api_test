@@ -13,8 +13,8 @@
             "type": "object",
             "required": ["id", "parent_id", "version", "status", "intersection", "affiliation", "user_id", "manager_id", "under_id", "assistance_id", "id_sales", "id_detailing", "insurance_type_id",
             "product_id", "agent_list_type", "agent_id", "validity_period", "agent_commission","insurance_period", "insurance_period_unit", "insurance_amount", "insurance_amount_currency",
-            "decision_making_level", "cr_lr_id", "tariff", "premium", "franchise_option","franchise_type_id", "franchise_loss", "franchise_damage", "franchise_info",
-            "is_franchise_single", "contract_type_id", "number_contract", "number_quote","have_reinsurance", "reinsurance_required", "reinsurance_required", "reinsurance_type_id", "reinsurer_residence", 
+            "decision_making_level", "cr_lr_id", "tariff", "premium", "franchise_info",
+            "contract_type_id", "number_contract", "number_quote","have_reinsurance", "reinsurance_required", "reinsurance_required", "reinsurance_type_id", "reinsurer_residence",
             "reinsurer_rating","comment_manager", "comment_under", "comment_object", "comment_review", "return_ones","return_cancel_user_id","cause","reason_id","reason_comment", "project_bonus_feature","bonus_net_income","project_bonus_full_name", "project_bonus_size","project_bonus_size","manager_bonus", "team_bonus", "regional_bonus", "bonuses", "manager_bonus_max","team_bonus_max","regional_bonus_max", "date_board_submit", "date_board_submit_auto_update","checked_by_risk_manager", "rvd_percent", "requested_at", "cancelled_at",
             "updated_at", "created_at"],
             "properties": {
@@ -44,78 +44,63 @@
                 },
                 "under_id": {
                     "type": "number"
-                }, 
+                },
                 "assistance_id": {
                     "type": ["number", "null"]
-                }, 
+                },
                 "id_sales": {
                     "type": "number"
-                }, 
+                },
                 "id_detailing": {
                     "type": "number"
-                }, 
+                },
                 "insurance_type_id": {
                     "type": "number"
-                }, 
+                },
                 "product_id": {
                     "type": "number"
-                }, 
+                },
                 "agent_list_type": {
                     "type": "number"
-                }, 
+                },
                 "agent_id": {
                     "type": "number"
-                }, 
+                },
                 "agent_commission": {
                     "type": "number"
-                }, 
+                },
                 "insurance_period": {
                     "type": "number"
-                }, 
+                },
                 "validity_period": {
                     "type": ["number", "null"]
-                }, 
+                },
                 "insurance_period_unit": {
                     "type": "string"
-                }, 
+                },
                 "insurance_amount": {
                     "type": "number"
-                }, 
+                },
                 "insurance_amount_currency": {
                     "type": "string"
-                }, 
+                },
                 "decision_making_level": {
                     "type": "number"
-                }, 
+                },
                 "decision_making_level_changes": {
                     "type": ["number", "null"]
                 },
                 "cr_lr_id": {
                     "type": "number"
-                }, 
+                },
                 "tariff": {
                     "type": "number"
                 },
                 "premium": {
                     "type": "number"
-                },  
-                "franchise_option": {
-                    "type": "string"
-                },
-                "franchise_type_id": {
-                    "type": "number"
-                },
-                "franchise_loss": {
-                    "type": ["string", "null"]
-                },
-                "franchise_damage": {
-                    "type": ["string", "null"]
                 },
                 "franchise_info": {
                     "type": ["string", "null"]
-                },
-                "is_franchise_single": {
-                    "type": "boolean"
                 },
                 "contract_type_id": {
                     "type": "number"

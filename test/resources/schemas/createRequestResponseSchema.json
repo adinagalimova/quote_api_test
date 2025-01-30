@@ -13,8 +13,7 @@
             "type": "object",
             "required": ["status", "intersection", "affiliation", "manager_id", "under_id", "assistance_id", "id_sales", "id_detailing", "insurance_type_id",
             "product_id", "agent_id", "agent_commission","insurance_period", "insurance_period_unit", "insurance_amount", "insurance_amount_currency",
-            "decision_making_level", "cr_lr_id", "tariff", "premium", "franchise_option","franchise_type_id", "franchise_loss", "franchise_damage", "franchise_info",
-            "is_franchise_single", "contract_type_id", "number_contract", "number_quote","reinsurance_required", "reinsurance_type_id", "reinsurer_residence",
+            "decision_making_level", "cr_lr_id", "tariff", "premium", "franchise_info","contract_type_id", "number_contract", "number_quote","reinsurance_required", "reinsurance_type_id", "reinsurer_residence",
             "reinsurer_rating","comment_manager", "comment_object", "project_bonus_feature", "project_bonus_size","validity_period", "user_id",
             "updated_at", "created_at", "id", "parent_id", "version"],
             "properties": {
@@ -78,23 +77,8 @@
                 "premium": {
                     "type": "number"
                 },
-                "franchise_option": {
-                    "type": "string"
-                },
-                "franchise_type_id": {
-                    "type": "number"
-                },
-                "franchise_loss": {
-                    "type":  ["string", "null"]
-                },
-                "franchise_damage": {
-                    "type": ["string", "null"]
-                },
                 "franchise_info": {
                     "type":  ["string", "null"]
-                },
-                "is_franchise_single": {
-                    "type": "boolean"
                 },
                 "contract_type_id": {
                     "type": "number"

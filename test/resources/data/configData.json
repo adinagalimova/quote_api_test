@@ -5,7 +5,7 @@
     "hiddenLogBodies": true,
     "verification": true,
     "timezone": "Asia/Aqtau",
-    "environment": "dev",
+    "environment": "localhost",
     "allureCommandlineArgs": [
         "generate",
         "./test/artifacts/allure-results",

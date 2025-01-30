@@ -37,8 +37,9 @@ class DataUtils {
     const mappedData = JSONMapper.mapValues(
       { quoteRequest },
       { quoteResponseFromTWB },
-      optionalSchema ?? JSONLoader.requestSetQuotationMapSchema,
+      optionalSchema ?? JSONLoader.requestToGetListByNameMapSchema,
     );
+
     const parentIDKeys = JSONMapper
       .getNestedProperty(mappedData, 'parent_id').keys;
     parentIDKeys.forEach((key) => {
@@ -52,27 +53,27 @@ class DataUtils {
       const value = mappedData[key];
       mappedData[key] = parseInt(value, 10);
     });
-    const insuranceAmountKeys = JSONMapper
-      .getNestedProperty(mappedData, 'insurance_amount').keys;
-    insuranceAmountKeys.forEach((key) => {
-      let value = mappedData[key];
-      value = parseInt(value, 10);
-      mappedData[key] = value.toFixed(2);
-    });
-    const tariffKeys = JSONMapper
-      .getNestedProperty(mappedData, 'tariff').keys;
-    tariffKeys.forEach((key) => {
-      let value = mappedData[key];
-      value = parseInt(value, 10);
-      mappedData[key] = value.toFixed(6);
-    });
-    const premiumKeys = JSONMapper
-      .getNestedProperty(mappedData, 'premium').keys;
-    premiumKeys.forEach((key) => {
-      let value = mappedData[key];
-      value = parseInt(value, 10);
-      mappedData[key] = value.toFixed(2);
-    });
+    // const insuranceAmountKeys = JSONMapper
+    //   .getNestedProperty(mappedData, 'insurance_amount').keys;
+    // insuranceAmountKeys.forEach((key) => {
+    //   let value = mappedData[key];
+    //   value = parseInt(value, 10);
+    //   mappedData[key] = value.toFixed(2);
+    // });
+    // const tariffKeys = JSONMapper
+    //   .getNestedProperty(mappedData, 'tariff').keys;
+    // tariffKeys.forEach((key) => {
+    //   let value = mappedData[key];
+    //   value = parseInt(value, 10);
+    //   mappedData[key] = value.toFixed(6);
+    // });
+    // const premiumKeys = JSONMapper
+    //   .getNestedProperty(mappedData, 'premium').keys;
+    // premiumKeys.forEach((key) => {
+    //   let value = mappedData[key];
+    //   value = parseInt(value, 10);
+    //   mappedData[key] = value.toFixed(2);
+    // });
 
     const rewritedData = JSONMapper.rewriteValues(
       mappedData,
